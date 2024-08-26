@@ -1,0 +1,10 @@
+#caja {
+    width: 300px;
+    height: 79px;
+    line-height: 79px;
+    border: 5px solid black;
+    background-color: #ccc;
+    color: black;
+    font-size: 19px;
+    text-align: center;
+}
