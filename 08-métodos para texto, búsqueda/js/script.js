@@ -43,7 +43,7 @@ console.log("Búsqueda primera coincidencia: " + busqueda);
 var busqueda = texto1.lastIndexOf("1");
 console.log("Búsqueda última coincidencia: " + busqueda);
 
-// Buscar algo para saber de qué posición, qué carácter se encuentra
+// Buscar algo para saber qué posición tiene, qué carácter se encuentra
 var busqueda = texto1.search("o");
 console.log("Búsqueda posición: " + busqueda);
 

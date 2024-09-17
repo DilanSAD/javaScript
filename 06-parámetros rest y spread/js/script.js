@@ -14,3 +14,8 @@ list ("item1","item2","item3","item4","item5","item6",)
 var items = ["item1","item2"];
 list (...items, "item3", "item4")
 
+
+const numbers = [1, 2, 3]
+const numbers2 = [4, 5]                 
+const allNumbers = [...numbers, ...numbers2]
+console.log(allNumbers)
