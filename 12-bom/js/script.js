@@ -1,5 +1,3 @@
-'use strict'
-
 // BOM: Browser Object Model
 
 // Anchura de la ventana
@@ -17,7 +15,7 @@ console.log(screen.height);
 // URL
 console.log(window.location);
 
-var url = "url";
+var url = "url.com";
 window.location.href = url;
 
 // Abrir pestaña nueva en el navegador

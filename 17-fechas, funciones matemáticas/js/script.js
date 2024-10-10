@@ -1,8 +1,7 @@
-'use strict'
-
 // Fecha actual con todo
 var fecha = new Date();
 
+// Fechas
 var year = fecha.getFullYear();
 var mes = fecha.getMonth() + 1; // Los meses van de 0 a 11, por eso sumamos 1
 var dia = fecha.getDate();

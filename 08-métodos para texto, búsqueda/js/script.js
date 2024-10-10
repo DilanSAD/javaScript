@@ -1,5 +1,3 @@
-'use strict'
-
 var numero = 1;
 var texto1 = "texto1";
 var texto2 = "texto2";
@@ -81,9 +79,9 @@ const tieneCorazon = emojis.includes('😍')
 console.log(tieneCorazon)
 
 /*
-    .every verifica si todos los elementos de un Array cumplen con una condición
+    .every verifica si todos los elementos de un array cumplen con una condición
     si todos cumplen retorna true si al menos uno no cumple retorna false
-    deja de iterar sobre el Array en cuanto encuentra un elemento que no cumple con la condición.
+    deja de iterar sobre el array en cuanto encuentra un elemento que no cumple con la condición
 */
 // ¿Todos los emojis son felices?
 const emojisNuevos = ['😀', '😂', '😍', '😭', '🥺', '😎']

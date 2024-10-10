@@ -1,5 +1,3 @@
-'use strict'
-
 // JSON: JavaScript Object Notation
 // Enviar datos y recibir datos
 

@@ -1,5 +1,3 @@
-'use strict'
-
 // LocalStorage: memoría a nivel de navegador, localStorage por dominio
 
 // Comprobar disponibilidad

@@ -1,5 +1,3 @@
-'use strict'
-
 // Eventos: función que se ejecuta cuando pasa algo
 
 var boton = document.querySelector("#boton");
@@ -73,7 +71,6 @@ textarea.addEventListener('keypress', function (event) {
 textarea.addEventListener('keyup', function (event) {
     console.log("Soltando ", String.fromCharCode(event.keyCode));
 });
-
 
 // Submit
 formulario.addEventListener('submit', () => {

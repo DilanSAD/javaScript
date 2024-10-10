@@ -1,5 +1,3 @@
-'use strict'
-
 // fuction expression
 var variable = function (parametro) {
     // Funciones anónimas: no tienen nombre
@@ -14,8 +12,6 @@ var variable = function (parametro) {
 const saludar = () => {
     // Código a ejecutar
 }
-
-
 // Función flecha
 const sumarFlecha = (a, b) => {
     return a + b
@@ -29,7 +25,7 @@ const sumarFlecha = (a, b) => {
 const restarFlecha = (a, b) => a - b
 
 
-// Callbacks
+// Callbacks, se puede aunque no sea asíncrono
 function sumame(numero1, numero2, sumaYmuestra, sumaPorDos) {
     var suma = numero1 + numero2;
 
@@ -38,7 +34,7 @@ function sumame(numero1, numero2, sumaYmuestra, sumaPorDos) {
 
     return sumar;
 }
-// No sé como se llama el parametro solo se que debo pasar un dato y uso una función anónima para eso
+// No sé como se llama el parámetro, solo se que debo pasar un dato y uso una función anónima para eso
 sumame(5, 7, function(dato) {
     alert("Suma: "+ dato);
 },

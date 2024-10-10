@@ -1,5 +1,3 @@
-'use strict'
-
 // Parámetro REST captura el resto de elementos en un array
 function list (item1, item2, ...rest) {
     console.log("item 1", item1);

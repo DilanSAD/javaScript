@@ -1,18 +1,23 @@
-'use strict'
-
 // DOM: Document Object Model
 
-// Seleccionar elementos por Id
+// .getElementById seleccionar elementos por Id
 var caja = document.getElementById("caja");
-// Se debe ser más especifico
+// .querySelector se debe ser más especifico
 var caja = document.querySelector("#caja");
 
 
-// Seleccionar elementos por su etiqueta
+// .getElementsByTagName seleccionar elementos por su etiqueta
 var todosLosDivs = document.getElementsByTagName("div");
 console.log(todosLosDivs);
 
-// TextContent es lo mismo que InnerHTML pero Inner permite modificar
+// .getElementsByClassName seleccionar un elemento por su clase
+var clase = document.getElementsByClassName("clase1");
+
+// .querySelectorAll seleccionar muchos elementos
+elemento = parentNode.querySelectorAll("");
+
+
+// .textContent es lo mismo que I.nnerHTML pero Inner permite modificar
 var contenidoEnTexto = todosLosDivs[0].textContent;
 alert(contenidoEnTexto);
 // document.createElement
@@ -20,14 +25,6 @@ alert(contenidoEnTexto);
 // .append
 // .preappend
 // .className
-
-// Seleccionar un elemento por su clase
-var clase = document.getElementsByClassName("clase1");
-
-// Seleccionar muchos elementos
-elemento = parentNode.querySelectorAll("");
-
-
 
 // Modificar html
 caja.innerHTML = "Caja desde js";

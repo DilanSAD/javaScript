@@ -1,5 +1,3 @@
-'use strict'
-
 // Mostrar Alerta por pantalla
 alert("Alerta");
 
