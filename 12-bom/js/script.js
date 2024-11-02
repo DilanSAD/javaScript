@@ -1,4 +1,4 @@
-// BOM: Browser Object Model
+// ### BOM: Browser Object Model ###
 
 // Anchura de la ventana
 console.log(window.innerWidth);

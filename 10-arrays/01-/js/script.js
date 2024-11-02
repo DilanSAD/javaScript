@@ -26,6 +26,12 @@ var items = new Array("item1", "item2", "item3")
   "clave" = valor
 }
 
+// Inicializar Arrays con valores por defecto
+const ArrayCeros = new Array(10).fill(0);
+// .flat para aplanar Arrays
+// .every comparar todo si por lo menos uno no cumple da false
+// .some por lo menos si uno cumple da true
+
 
 // Arrays colección de elementos
 var items = new Array("item1", "item2", "item3")
@@ -43,6 +49,7 @@ for(let item in items) {
 for(let item of items) {
     console.log(item);
 }
+
 
 // Ejemplo de array de funciones
 // Definimos un array de funciones
@@ -69,6 +76,7 @@ var peliculas = ["Comedy", "Popeye","XV"];
 var cine = [categorias, peliculas];
 // Primero fila luego columna
 console.log(cine[1][2]);
+
 
 //Arays de objetos
 var items = [

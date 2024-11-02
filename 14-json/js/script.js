@@ -1,6 +1,5 @@
-// JSON: JavaScript Object Notation
+// ### JSON: JavaScript Object Notation ###
 // Enviar datos y recibir datos
-
 
 // Crear un objeto Json
 var pelicula = {

@@ -1,18 +1,21 @@
 var numero1 = 10;
 var numero2 = 20;
+// ### Operadores ###
 // Operadores aritméticos
-var operacion_suma = numero1 + numero2;
-var operacion_resta = numero1 - numero2;
-var operacion_multiplicacion = numero1 * numero2;
-var operacion_division = numero1 / numero2;
-var operacion_restante = numero1 % numero2; // El porcentaje/modulo saca el restante de la división de ambos
-var operacion_elevacion = numero1 ** numero2; // Con ** para el exponente
-// Incrementar
-a++;
-++a;
-// decrementar
-a--;
---a;
+var suma = numero1 + numero2;
+var resta = numero1 - numero2;
+var multiplicacion = numero1 * numero2;
+var division = numero1 / numero2;
+var restante = numero1 % numero2; // El porcentaje/modulo saca el restante de la división de ambos
+var elevacion = numero1 ** numero2; // Con ** para el exponente
+/* Incrementar
+    a++;
+    ++a;
+*/
+/* Decrementar
+    a--;
+    --a;
+*/
 
 /* Operadores relacionales/comparativos
     > mayor a
@@ -31,30 +34,36 @@ a--;
 */
 
 
-// Tipos de datos
+// ### Tipos de datos ###
 /* Primitivos: se pasan por valor
     number
+        var numero_entero = 21;
+        var numero_negativo = -22;
+        var numero_decimal = 19.18;
     bigInt
+        var numero_big_init = 123456789987654321n;
     string
+        var texto = "String comillas dobles"
+        var texto = 'String comillas simples'
+        var texto = `Acento invertido, permite incrustar valores dentro`
+        var cadena_texto = 'las comillas simples tienen prioridad las dobles "parte del String"';
     boolean
+        var boolean = true; Boolean también puede ser 0 falso y 1 verdadero
     Symbol()
-    underfined no definido
-    null vacio pero definido, no tiene valor
+        Symbol(); // Symbol crea un simbolo diferente con cada llamado
+    underfined 
+        no definido
+    null 
+        vacio pero definido, no tiene valor
 */
-"Texto string" // String comillas dobles
-'Texto string'  // String comillas simples
-`Texto String` // Acento invertido, permite incrustar valores dentro
-var cadena_texto = 'las comillas simples tienen prioridad las dobles "parte del String"';
-var numero_entero = 21;
-var numero_entero_negativo = -22;
-var numero_decimal = 19.18;
-var numero_big_init = 123456789987654321n;
-var bolean_verdadero_o_falso = true; // Bolean también puede ser 0 falso y 1 verdadero
 
-/* ## Objects: no primitivos se pasan por referencia
+
+/* No primitivos (Objects): se pasan por referencia
     objetos {}
     arrays []
-    const set = new Set()
+    const set = new Set() 
+        // Set() no permite duplicados
+        // has() para buscar si existe
     const set = new WeakSet()
     const set = new Map()
     const set = new weakMap()
@@ -64,36 +73,31 @@ var bolean_verdadero_o_falso = true; // Bolean también puede ser 0 falso y 1 ve
 */
 
 
-// Objetos  
-// Objeto literal
-var objetos = {};
-let objetos = {
-    // Propiedades
-    clave: "valor",
-    edad: 20,
-};
-// Primera forma de reasignar un valor
-objetos.edad = 22;
-// Segunda forma de reasignar un valor
-let llave = "edad";
-objetos[llave] = 23;
-// Eliminar una propiedad
-delete objetos.edad;
-
-
 // typeof para identificar el tipo de dato de una variable (Siempre devuelve una cadena de texto con el tipo de dato)
-typeof numero1;
-// Symbol crea un simbolo diferente con cada llamado
-Symbol() 
+typeof boolean;
 
 
 var numero_falso = "33";
-// Funciones para convertir datos
-Number(numero_falso)+7;
-parseInt(numero_falso)+7;
-parseFloat(numero_falso)+7;
-toString(numero_falso)+"7";
-console.log(String(numero_entero)+0);
+var numero_entero = 21;
+// ### Funciones para convertir datos ###
+console.log(Number(numero_falso)+7.3);
+console.log(parseInt(numero_falso)+7);
+console.log(parseFloat(numero_falso)+7.222);
+console.log(toString(numero_falso)+6);
+console.log(String(numero_entero)+'texto');
+
+const web = ['HTML', 'CSS', 'JavaScript', 'PHP', 'SQL'];
+const backend = ['Java', 'Python', 'Node.js', 'C#', 'Ruby', 'Go'];
+const frontend = ['React', 'Angular', 'Vue.js', 'Svelte', 'jQuery'];
+
+web.union(backend) // Unión de ambas colecciones
+web.intersection(backend) // Elementos que coinciden en ambos
+backend.difference(frontend) // Elementos que están en la primera colección pero no en la segunda
+backend.symmetricDifference(frontend) // Todos los elementos diferentes en ambas colecciones
+
+backend.isSubsetOf(web) // Si todos los elementos de A están en B, entonces A es un subconjunto de B
+backend.isSupersetOf(web) // Si todos los elementos de A están en B, entonces B es un subconjunto de A
+backend.isDisjointFrom(web) // Las colecciones no comparten elementos
 
 
 

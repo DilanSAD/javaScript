@@ -1,4 +1,4 @@
-// DOM: Document Object Model
+//  ### DOM: Document Object Model ###
 
 // .getElementById seleccionar elementos por Id
 var caja = document.getElementById("caja");

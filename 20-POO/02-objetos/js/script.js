@@ -14,26 +14,37 @@ console.log(new String('String'))
 console.log(new Boolean(true))
 
 
+// Objeto literal
+var objetos = {};
+let objetos = {
+    // Propiedades
+    clave: "valor",
+    edad: 20,
+};
+// Primera forma de reasignar un valor
+objetos.edad = 22;
+// Segunda forma de reasignar un valor
+let llave = "edad";
+objetos[llave] = 23;
+// Eliminar una propiedad
+delete objetos.edad;
 
+// objeto/lista vacia
+const users = new Object()
 
-// Objeto literal    objeto/lista vacia
-const users = {}
-const users2 = new Object()
-
-// Objeto lista de llave clave y valor
+// Objeto lista de llave clave - valor
 const user = {
-    // Propiedades del objeto  
-    // Clave valor
+    // Las propiedades y métodos de un objeto pueden ser de cualquier tipo de JavaScript, incluso otros objetos o arrays.
+    // Clave - valor
     name: "Dilan",
     lastname: "Acosta",
     age: 22,
-    hobbies: ['Programar','Aprender'], // Array
-
     // Objeto dentro de objeto
     address: {
         street: 'street',
         city: 'Medellín'
     },
+    hobbies: ['Programar','Aprender'], // Array
 
     // Métodos son acciones que permiten alterar el comportamiento/operar
     // En js se les conoce como funciones
@@ -44,11 +55,6 @@ const user = {
         return this.name
     }
 }
-
-// Objet.keys para ver las claves del objeto
-console.log(Object.keys(user))
-// Objet.value para ver las claves del objeto
-console.log(Object.values(user))
 
 // Método
 function showFullName(name, lastname) {
@@ -77,6 +83,79 @@ person2.name = "AAA"
 person2.lastname = "BBB"
 console.log(person2.showFullName())
 
+
+
+
+// ### ITERAR OBJETOS EN JS ###
+// La estructura de control for...in nos permite crear un bucle que itera sobre todas las propiedades 
+// enumerables de un objeto, en un orden arbitrario.
+const spiderman = {
+    name: 'Spidey',
+    universe: 42,
+    powers: ['web', 'invisibility', 'spider-sense']
+  }
+  
+  for (const property in spiderman) {
+    console.log(`${property}: ${spiderman[property]}`);
+  }
+// Objet.keys para ver las claves del objeto, retorna un array con cada una de las llaves de las propiedades enumerables de un objeto.
+console.log(Object.keys(user))
+// Objet.value para ver las claves del objeto, retorna un array con los valores de lass propiedades enumerables de un objeto.
+console.log(Object.values(user))
+// Object.entries() retorna un array de arrays, donde cada subarray es un par [propiedad, valor] correspondiente a las propiedades enumerables de un objeto.
+const entries = Object.entries(spiderman)
+
+entries.forEach(entry => {
+  console.log(entry)
+})
+
+// ### Operador de encadenamiento opcional ###
+// Permite leer el valor de una propiedad ubicada profundamente dentro de una cadena de objetos conectados, sin tener 
+// que validar expresamente que cada referencia en la cadena es válida.
+const gamesystem = {
+    name: 'PS5',
+    price: 550,
+    specs: {
+      cpu: 'AMD Ryzen Zen 2',
+      gpu: 'AMD Radeon RDNA 2',
+    }
+  }
+  console.log(gamesystem.specifications?.cpu) // -> undefined
+  console.log(gamesystem.specs?.cpu) // -> AMD Ryzen Zen 2
+
+
+
+
+// Objeto global
+// En el navegador es 'window', en Node.js es 'global'
+// Es el objeto principal donde se almacenan variables y funciones globales
+
+// Ejemplo de objeto global y this
+const objetoGlobal = {
+    nombre: "Objeto Global",
+    saludar: function() {
+        console.log("Hola desde", this.nombre);
+    }
+};
+
+// This hace referencia al dueño del contexto de ejecución
+const persona = {
+    nombre: "María",
+    saludar: function() {
+        console.log("Hola, soy", this.nombre); // this se refiere a persona
+    }
+};
+
+// Función suelta - this apunta al objeto global
+function funcionSuelta() {
+    console.log("This apunta a:", this);
+}
+
+// Demostración
+objetoGlobal.saludar(); // this se refiere a objetoGlobal
+persona.saludar(); // this se refiere a persona
+funcionSuelta(); // this se refiere al objeto global (window en navegador)
+// Las funciones flechas no pueden ser underfined
 
 
 

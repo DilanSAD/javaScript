@@ -1,7 +1,6 @@
+// ### Condicionales ###
 var menor = 17;
 var mayor = 18;
-// Condicionales
-
 // if condicional simple
 if (menor > mayor) {
     console.log("Sigue siendo muy joven");
@@ -30,7 +29,7 @@ switch(edad) {
 }
 console.log(imprime);
 
-let edad = 25;
+var edad = 25;
 switch(true) {
   case (edad >= 18 && edad < 25):
     console.log("Joven");
@@ -45,7 +44,7 @@ switch(true) {
     console.log("f");
 }
 
-// Bucles
+// ### Bucles ###
 // for
 var numero = 100;
 // inicialización de contador, condición, incremento
@@ -55,7 +54,7 @@ for(var i = 1; i <= numero; i++) {
     // debugger
 }
 
-// Ejemplo de for...in si no conozco las propiedades
+// for...in para iterar sobre las propiedades enumerables de un objeto
 console.log("Ejemplo de for...in:");
 const persona = {
     nombre: "Juan",
@@ -66,7 +65,7 @@ for (let propiedad in persona) {
     console.log(`${propiedad}: ${persona[propiedad]}`);
 }
 
-// Ejemplo de for...of si conozco las propiedades
+// for...of para iterar sobre elementos iterables (arrays, strings, etc)
 console.log("Ejemplo de for...of:");
 const frutas = ["manzana", "banana", "naranja", "uva"];
 for (let fruta of frutas) {
@@ -78,11 +77,10 @@ var year = 2050;
 // Mientras la condición se cumpla, mientras la condición es true
 while(year >= 2025) {
     console.log(year);
-    // Se debe asegurar que la condición tarde o temprano sea false para evitar un bucle infinito
-    year--;
+    year--; // Se debe asegurar que la condición tarde o temprano sea false para evitar un bucle infinito
 }
 
-// Do White  entra por lo menos una vez
+// Do While entra por lo menos una vez
 var years = 20;
 // Primero ejecutamos y luego comprobamos
 do {
@@ -90,21 +88,20 @@ do {
     years++;
     // Dentro de cualquier bucle puedo tener un break;
     if (years == 19) {
-        // Rompe el bucle, deja de ejecutarse
-        break;
+        break; // Rompe el bucle, deja de ejecutarse
     }
 
     if (years == 23) {
-        alert("Ya casi")
+        alert("Ya casi");
         continue; // Salta a la siguiente iteración, No ejecuta nada de lo que hay después porque vuelve a empezar
     }
-} while(years < 25)
+} while(years < 25);
 
 
-let resultado
+var resultado;
 do {
-    resultado = confirm('Quieres seguir el bucle?')
-} while (resultado)
+    resultado = confirm('¿Quieres seguir el bucle?');
+} while (resultado);
 
 
 

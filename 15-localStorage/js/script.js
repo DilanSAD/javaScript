@@ -1,4 +1,4 @@
-// LocalStorage: memoría a nivel de navegador, localStorage por dominio
+// ### LocalStorage: memoría a nivel de navegador, localStorage por dominio ###
 
 // Comprobar disponibilidad
 if(typeof (Storage) !== 'undefined') {

@@ -1,7 +1,7 @@
 // Fecha actual con todo
 var fecha = new Date();
 
-// Fechas
+// ### Fechas ###
 var year = fecha.getFullYear();
 var mes = fecha.getMonth() + 1; // Los meses van de 0 a 11, por eso sumamos 1
 var dia = fecha.getDate();
@@ -19,7 +19,7 @@ const textoHora = `
 console.log(textoHora);
 
 
-// Matemáticas
+// ### Matemáticas ###
 
 // Número aleatorío
 console.log(Math.random());
